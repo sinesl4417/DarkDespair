@@ -1,0 +1,6 @@
+Small Health Potion
+Large Health Potion
+Small Mana Potion
+Large Mana Potion
+Small Stamina Potion
+Large Stamina Potion

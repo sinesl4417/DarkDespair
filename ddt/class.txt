@@ -1,0 +1,5 @@
+Human: Humans in Dark Despair play the role of a practical ranged attacker. Their primary weapon is a bow and arrow. Their intelligence is medium, strength is medium, and endurance is medium.
+
+Orc: Orcs in Dark Despair play the role of close combat warrior. Their primary weapon is a battle axe. Their intelligence is low, strength is high, and endurance is medium.
+
+Elf: Elves in Dark Despair play the role of magial mages. Their primary weapon is magic spells. Their intelligence is high, strength is low, and endurance is medium.

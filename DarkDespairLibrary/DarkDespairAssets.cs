@@ -82,7 +82,7 @@ namespace DarkDespairLibrary
             return "If you have not created a character, you will be given the default names.";
         }
 
-        public static void createCharacter()
+        public static void CreateCharacter()
         {
             StreamWriter outputFile;
             outputFile = File.CreateText(@"C:\ddt\charInfo.txt");
@@ -92,7 +92,7 @@ namespace DarkDespairLibrary
             Console.WriteLine("Enter your last name: ");
             string lname = Console.ReadLine();
             outputFile.WriteLine(lname);
-            Console.WriteLine("Would you like to play as a human, orc, or elf? [Type 'info' for more class information]: ");
+            Console.WriteLine("Would you like to play as a human, orc, or elf?: ");
             string charrace = Console.ReadLine();
             do
             {
@@ -114,10 +114,9 @@ namespace DarkDespairLibrary
                     break;
                 }
 
-                if (charrace.ToLower() == "info")
+                else
                 {
-                    DarkDespairAssets.DisplayClassInfo();
-                    break;
+                    DarkDespairAssets.OptionErrorMessage();
                 }
             } while (true);
 

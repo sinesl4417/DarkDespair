@@ -26,7 +26,7 @@ namespace DarkDespairLibrary
             switch (Console.ReadLine())
             {
                 case "1":
-                    DarkDespairAssets.createCharacter();
+                    DarkDespairAssets.CreateCharacter();
                     return false;
                 case "2":
                     DarkDespairGame.PlayDarkDespair();

@@ -1,0 +1,4 @@
+Unarmed
+Axe
+Bow
+Fireball
