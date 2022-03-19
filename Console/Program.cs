@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.IO;
 using DarkDespairLibrary;
 
-namespace TextAdventure
+namespace Console
 {
     internal class Program
     {
