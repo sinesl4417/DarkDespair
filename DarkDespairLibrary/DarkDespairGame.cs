@@ -138,9 +138,9 @@ namespace DarkDespairLibrary
                     Console.WriteLine("You engage in battle with the " + DarkDespairLists.MobList.ElementAt(1) + ".");
                     while (PlayerHealth > 0 && MobHealth > 0)
                     {
-                        int UserAttack = new Random().Next(5, 10);
-                        int MobAttack = new Random().Next(3, 6);
-                        int BlockedAttack = new Random().Next(0, 1);
+                        int UserAttack = new Random().Next(1, 21);
+                        int MobAttack = new Random().Next(1, 21);
+                        int BlockedAttack = new Random().Next(0, 5);
                         Console.WriteLine("Your health: " + PlayerHealth);
                         Console.WriteLine(DarkDespairLists.MobList.ElementAt(1) + "'s health: " + MobHealth);
                         Console.WriteLine("Attack (A) or Block (B): ");

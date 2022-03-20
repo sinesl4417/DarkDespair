@@ -147,5 +147,11 @@ namespace DarkDespairLibrary
             }
             Console.WriteLine();
         }
+
+        public static void Test()
+        {
+
+        }
+
     }
 }
