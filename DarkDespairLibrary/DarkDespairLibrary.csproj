@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DarkDespairAssets.cs" />
-    <Compile Include="DarkDespairGame.cs" />
-    <Compile Include="DarkDespairLists.cs" />
-    <Compile Include="DarkDespairMenus.cs" />
+    <Compile Include="Assets.cs" />
+    <Compile Include="Encounters.cs" />
+    <Compile Include="Mob.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Lists.cs" />
+    <Compile Include="Menus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

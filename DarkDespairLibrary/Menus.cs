@@ -14,9 +14,9 @@ using System.IO;
 
 namespace DarkDespairLibrary
 {
-    public class DarkDespairMenus
+    public class Menus
     {
-        public static bool OpeningMenu()
+        public static bool MainMenu()
         {
             Console.WriteLine("1. Create Character");
             Console.WriteLine("2. Play Dark Despair");
@@ -26,19 +26,19 @@ namespace DarkDespairLibrary
             switch (Console.ReadLine())
             {
                 case "1":
-                    DarkDespairAssets.CreateCharacter();
+                    Assets.CreateCharacter();
                     return false;
                 case "2":
-                    DarkDespairGame.PlayDarkDespair();
+                    Game.PlayDarkDespair();
                     return true;
                 case "3":
-                    DarkDespairAssets.DisplayFilesMenu();
+                    Assets.DisplayFilesMenu();
                     return true;
                 case "4":
                     Environment.Exit(0);
                     return false;
                 default:
-                    DarkDespairAssets.OptionErrorMessage();
+                    Assets.OptionErrorMessage();
                     return true;
             }
         }
@@ -51,41 +51,37 @@ namespace DarkDespairLibrary
             Console.WriteLine("4. Display Item Info");
             Console.WriteLine("5. Display Weapon Info");
             Console.WriteLine("6. Display Treasure Info");
-            Console.WriteLine("7. Display Potion Info");
-            Console.WriteLine("8. Return to Main Menu");
-            Console.WriteLine("9. Exit");
+            Console.WriteLine("7. Return to Main Menu");
+            Console.WriteLine("8. Exit");
             Console.WriteLine("Choose an option: ");
             switch (Console.ReadLine())
             {
                 case "1":
-                    DarkDespairAssets.DisplayClassInfo();
+                    Assets.DisplayClassInfo();
                     return true;
                 case "2":
-                    DarkDespairLists.DisplayCharacterInfo();
+                    Lists.DisplayCharacterInfo();
                     return true;
                 case "3":
-                    DarkDespairLists.DisplayMobs();
+                    Lists.DisplayMobs();
                     return true;
                 case "4":
-                    DarkDespairLists.DisplayItems();
+                    Lists.DisplayItems();
                     return true;
                 case "5":
-                    DarkDespairLists.DisplayWeapons();
+                    Lists.DisplayWeapons();
                     return true;
                 case "6":
-                    DarkDespairLists.DisplayTreasure();
+                    Lists.DisplayTreasure();
                     return true;
                 case "7":
-                    DarkDespairLists.DisplayPotions();
+                    Assets.DisplayMainMenu();
                     return true;
                 case "8":
-                    DarkDespairAssets.DisplayOpeningMenu();
-                    return true;
-                case "9":
                     Environment.Exit(0);
                     return false;
                 default:
-                    DarkDespairAssets.OptionErrorMessage();
+                    Assets.OptionErrorMessage();
                     return true;
             }
         }

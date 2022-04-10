@@ -14,23 +14,21 @@ using System.IO;
 
 namespace DarkDespairLibrary
 {
-    public class DarkDespairLists
+    public class Lists
     {
         public static void BuildLists()
         {
-            DarkDespairLists.Mobs();
-            DarkDespairLists.Items();
-            DarkDespairLists.Weapons();
-            DarkDespairLists.Treasure();
-            DarkDespairLists.Potions();
-            DarkDespairLists.CharacterInfo();
+            Lists.Mobs();
+            Lists.Items();
+            Lists.Weapons();
+            Lists.Treasure();
+            Lists.CharacterInfo();
         }
 
         public static List<string> MobList { get; set; } = new List<string>();
         public static List<string> ItemList { get; set; } = new List<string>();
         public static List<string> WeaponList { get; set; } = new List<string>();
         public static List<string> TreasureList { get; set; } = new List<string>();
-        public static List<string> PotionsList { get; set; } = new List<string>();
         public static List<string> CharacterInfoList { get; set; } = new List<string>();
         public static List<string> Inventory { get; set; } = new List<string>();
 
@@ -48,7 +46,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
         }
 
@@ -76,7 +74,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
         }
 
@@ -104,7 +102,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
         }
 
@@ -132,7 +130,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
         }
 
@@ -142,34 +140,6 @@ namespace DarkDespairLibrary
             foreach (string treasure in TreasureList)
             {
                 Console.WriteLine(treasure);
-            }
-            Console.ReadLine();
-        }
-
-        public static void Potions()
-        {
-            StreamReader inputFile;
-            try
-            {
-                inputFile = File.OpenText(@"C:\ddt\potions.txt");
-                while (inputFile.EndOfStream == false)
-                {
-                    PotionsList.Add(inputFile.ReadLine());
-                }
-                inputFile.Close();
-            }
-            catch (Exception)
-            {
-                DarkDespairAssets.FileErrorMessage();
-            }
-        }
-
-        public static void DisplayPotions()
-        {
-            Console.WriteLine("Potions List: ");
-            foreach (string potion in PotionsList)
-            {
-                Console.WriteLine(potion);
             }
             Console.ReadLine();
         }
@@ -188,7 +158,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
         }
 
@@ -218,7 +188,7 @@ namespace DarkDespairLibrary
             {
                 Inventory.Add(WeaponList.ElementAt(1));
             }
-            Inventory.Add(PotionsList.ElementAt(0));
+            Player.Potion += 1;
         }
     }
 }

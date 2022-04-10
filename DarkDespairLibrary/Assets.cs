@@ -14,12 +14,29 @@ using System.IO;
 
 namespace DarkDespairLibrary
 {
-    public class DarkDespairAssets
+    public class Assets
     {
+        public static Mob[] MobList = new Mob[5];
+
+        public static void CreateMobs()
+        {
+            MobList[0] = new Mob("Infected Rat", 1, 0, 0);
+            MobList[1] = new Mob("Green Troll", 20, 1, 1);
+            MobList[2] = new Mob("Blue Troll", 50, 5, 2);
+            MobList[3] = new Mob("Purple Troll", 100, 10, 4);
+            MobList[4] = new Mob("Cyclops", 250, 20, 20);
+        }
+
+        public static void BuildWorld()
+        {
+            CreateMobs();
+        }
+
         public static void BootUp()
         {
-            DarkDespairLists.BuildLists();
-            DarkDespairAssets.DisplayOpeningMenu();
+            Assets.BuildWorld();
+            Lists.BuildLists();
+            Assets.DisplayMainMenu();
         }
 
         public static string OptionErrorMessage()
@@ -36,15 +53,15 @@ namespace DarkDespairLibrary
         {
             Console.WriteLine("Game still in progress...\nReturning to main menu...");
             Console.ReadLine();
-            DarkDespairAssets.DisplayOpeningMenu();
+            Assets.DisplayMainMenu();
         }
 
-        public static void DisplayOpeningMenu()
+        public static void DisplayMainMenu()
         {
             bool showMenu = true;
             while (showMenu)
             {
-                showMenu = DarkDespairMenus.OpeningMenu();
+                showMenu = Menus.MainMenu();
             }
         }
 
@@ -53,33 +70,28 @@ namespace DarkDespairLibrary
             bool showMenu = true;
             while (showMenu)
             {
-                showMenu = DarkDespairMenus.FilesMenu();
+                showMenu = Menus.FilesMenu();
             }
         }
 
         public static string FirstName()
         {
-            return DarkDespairLists.CharacterInfoList.ElementAt(0);
+            return Lists.CharacterInfoList.ElementAt(0);
         }
 
         public static string LastName()
         {
-            return DarkDespairLists.CharacterInfoList.ElementAt(1);
+            return Lists.CharacterInfoList.ElementAt(1);
         }
 
         public static string Race()
         {
-            return DarkDespairLists.CharacterInfoList.ElementAt(2);
+            return Lists.CharacterInfoList.ElementAt(2);
         }
 
         public static string CharacterName()
         {
-            return DarkDespairLists.CharacterInfoList.ElementAt(3);
-        }
-
-        public static string CharCreationWarning()
-        {
-            return "If you have not created a character, you will be given the default names.";
+            return Lists.CharacterInfoList.ElementAt(3);
         }
 
         public static void CreateCharacter()
@@ -116,7 +128,7 @@ namespace DarkDespairLibrary
 
                 else
                 {
-                    DarkDespairAssets.OptionErrorMessage();
+                    Assets.OptionErrorMessage();
                 }
             } while (true);
 
@@ -126,7 +138,7 @@ namespace DarkDespairLibrary
             outputFile.Close();
             Console.WriteLine(fname + " " + lname + "'s character information: \nName: " + charname + "\nRace: " + charrace);
             Console.ReadLine();
-            DarkDespairAssets.DisplayOpeningMenu();
+            Assets.DisplayMainMenu();
         }
 
         public static void DisplayClassInfo()
@@ -143,7 +155,7 @@ namespace DarkDespairLibrary
             }
             catch (Exception)
             {
-                DarkDespairAssets.FileErrorMessage();
+                Assets.FileErrorMessage();
             }
             Console.WriteLine();
         }

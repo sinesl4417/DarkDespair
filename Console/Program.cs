@@ -19,7 +19,7 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            DarkDespairAssets.BootUp();
+            Assets.BootUp();
         }
     }
 }
