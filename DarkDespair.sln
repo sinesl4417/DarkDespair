@@ -9,12 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDespairLibrary", "DarkD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29FA2350-C5E0-4C01-8DE9-6A6570438ED5}"
 	ProjectSection(SolutionItems) = preProject
-		ddt\charInfo.txt = ddt\charInfo.txt
-		ddt\class.txt = ddt\class.txt
-		ddt\items.txt = ddt\items.txt
-		ddt\mobs.txt = ddt\mobs.txt
-		ddt\treasure.txt = ddt\treasure.txt
-		ddt\weapons.txt = ddt\weapons.txt
+		Console\bin\Debug\character.txt = Console\bin\Debug\character.txt
+		Console\bin\Debug\items.txt = Console\bin\Debug\items.txt
+		Console\bin\Debug\mobs.txt = Console\bin\Debug\mobs.txt
+		Console\bin\Debug\rooms.txt = Console\bin\Debug\rooms.txt
+		Console\bin\Debug\treasure.txt = Console\bin\Debug\treasure.txt
+		Console\bin\Debug\weapons.txt = Console\bin\Debug\weapons.txt
 	EndProjectSection
 EndProject
 Global
