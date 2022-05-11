@@ -22,8 +22,8 @@ namespace DarkDespairLibrary
             BuildTreasure();
             BuildWeapons();
             BuildMobs();
-            BuildPlayer();
             BuildRooms();
+            BuildPlayer();
         }
 
         #region Build Lists
@@ -116,9 +116,10 @@ namespace DarkDespairLibrary
                     int DEF = int.Parse(reader.ReadLine());
                     Weapon MW = null;
                     List<Item> MI = null;
+                    Room StartingLocation = World.Rooms[0];
                     bool LS = bool.Parse(reader.ReadLine());
                     bool CA = bool.Parse(reader.ReadLine());
-                    World.Players.Add(new Player(ID, Name, Desc, CHP, MHP, ATK, DEF, MW, MI, LS, CA));
+                    World.Players.Add(new Player(ID, Name, Desc, CHP, MHP, ATK, DEF, MW, MI, StartingLocation, LS, CA));
                 }
             }
         }

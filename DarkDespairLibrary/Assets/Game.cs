@@ -10,7 +10,17 @@ namespace DarkDespairLibrary
     {
         public static void Start()
         {
-            Console.WriteLine(Assets.InProgress());
+            Console.WriteLine("D: Display Current Location");
+            string UserInput = Console.ReadLine();
+            do
+            {
+                if (UserInput.ToLower() == "d")
+                {
+                    CurrentLocation.DisplayCurrentLocation();
+                }
+
+            }while (true);
+
         }
     }
 }

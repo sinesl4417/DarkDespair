@@ -33,6 +33,7 @@ namespace DarkDespairLibrary
             OutputFile.WriteLine("100");                    //defeault starting value
             OutputFile.WriteLine("1");                      //defeault starting value
             OutputFile.WriteLine("1");                      //defeault starting value
+            OutputFile.WriteLine("0");                      //defeault starting value
             OutputFile.WriteLine("false");
             OutputFile.WriteLine("false");
             OutputFile.Close();

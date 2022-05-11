@@ -42,13 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Assets.cs" />
+    <Compile Include="Assets\Combat.cs" />
     <Compile Include="Creatures\Creature.cs" />
     <Compile Include="Assets\Game.cs" />
+    <Compile Include="Location\CurrentLocation.cs" />
     <Compile Include="Items\Item.cs" />
-    <Compile Include="Items\Mob.cs" />
     <Compile Include="Creatures\Player.cs" />
     <Compile Include="Assets\Lists.cs" />
     <Compile Include="Items\Potion.cs" />
+    <Compile Include="Creatures\Mob.cs" />
+    <Compile Include="Commands\Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Location\Room.cs" />
     <Compile Include="Items\Treasure.cs" />
